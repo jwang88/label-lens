@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/cameraDisplay">
+
+    <fragment
+        android:id="@+id/cameraDisplay"
+        android:name="com.android.labellens.CameraDisplay"
+        android:label="fragment_camera_display"
+        tools:layout="@layout/fragment_camera_display" />
+
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.android.labellens.MainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_cameraDisplay4"
+            app:destination="@id/cameraDisplay" />
+    </fragment>
+
+</navigation>
